@@ -1,7 +1,4 @@
-import Head from 'next/head'
-import { Inter } from '@next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import Head from 'next/head';
 
 export default function Home() {
   return (
@@ -12,9 +9,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className="w-full h-screen flex flex-col justify-center items-center bg-[#15181E] text-white">
+      <div className="w-full h-screen flex flex-col justify-center items-center bg-background text-white">
         <h1 className="text-8xl">
-          Hi, i'm <span className="text-[#3CCADD] font-bold">Armen</span>!
+          Hi, i'm <span className="text-primary-gradient font-bold">Armen</span>!
         </h1>
         <p className="text-3xl my-14 text-center text-white/80">
           Looks like you're a little early{" "}
@@ -26,7 +23,7 @@ export default function Home() {
         <p className="text-3xl my-2 text-center text-white/80">
           See you soon!
         </p>
-      </body>
+      </div>
     </>
   );
 }
