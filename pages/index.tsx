@@ -14,18 +14,17 @@ export default function Home() {
       </Head>
       <div className="w-full h-screen flex flex-col justify-center items-center bg-[#15181E] text-white">
         <h1 className="text-8xl">
-          Hi, i'm <span className="text-[#3CCADD] font-bold">Armen</span>!
+          {"Hi, i'm"}{" "}
+          <span className="text-[#3CCADD] font-bold">{"Armen"}</span>!
         </h1>
         <p className="text-3xl my-14 text-center text-white/80">
-          Looks like you're a little early{" "}
+          {"Looks like you're a little early"}
           <span className="text-[#C678DD] font-bold">{":("}</span>
         </p>
         <p className="text-3xl my-2 text-center text-white/80">
-          I'm working really hard to get it up and running.
+          {"I'm working really hard to get it up and running."}
         </p>
-        <p className="text-3xl my-2 text-center text-white/80">
-          See you soon!
-        </p>
+        <p className="text-3xl my-2 text-center text-white/80">{"See you soon!"}</p>
       </div>
     </>
   );
