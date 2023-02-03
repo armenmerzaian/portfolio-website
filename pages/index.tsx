@@ -12,7 +12,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className="w-full h-screen flex flex-col justify-center items-center bg-[#15181E] text-white">
+      <div className="w-full h-screen flex flex-col justify-center items-center bg-[#15181E] text-white">
         <h1 className="text-8xl">
           Hi, i'm <span className="text-[#3CCADD] font-bold">Armen</span>!
         </h1>
@@ -26,7 +26,7 @@ export default function Home() {
         <p className="text-3xl my-2 text-center text-white/80">
           See you soon!
         </p>
-      </body>
+      </div>
     </>
   );
 }
