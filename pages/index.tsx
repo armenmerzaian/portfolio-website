@@ -1,6 +1,27 @@
+import Badge from '@/components/Badge';
+import Button from '@/components/Button';
+import Card from '@/components/Card';
+import LabeledIcon from '@/components/LabeledIcon';
 import Head from 'next/head';
 
+import PlaceholerImg from '/public/placeholder-card.jpg';
+
+import { FaHtml5 } from 'react-icons/fa';
+
 export default function Home() {
+  
+  let learnMore = () => {
+    console.log('Learn More');
+  }
+
+  let github = () => {
+    console.log("GitHub");
+  };
+
+  let launch = () => {
+    console.log("Launch");
+  };
+  
   return (
     <>
       <Head>
@@ -9,21 +30,79 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="w-full h-screen flex flex-col justify-center items-center bg-background text-white">
-        <h1 className="text-8xl">
-          Hi, i'm <span className="text-primary-gradient font-bold">Armen</span>!
-        </h1>
-        <p className="text-3xl my-14 text-center text-white/80">
-          Looks like you're a little early{" "}
-          <span className="text-[#C678DD] font-bold">{":("}</span>
-        </p>
-        <p className="text-3xl my-2 text-center text-white/80">
-          I'm working really hard to get it up and running.
-        </p>
-        <p className="text-3xl my-2 text-center text-white/80">
-          See you soon!
-        </p>
-      </div>
+      <main>
+        <Button
+          text="Learn More"
+          variant="primary"
+          arrow={true}
+          shadow={true}
+          onClick={learnMore}
+        />
+        <Button
+          text="GitHub"
+          variant="secondary"
+          arrow={false}
+          shadow={false}
+          onClick={github}
+        />
+        <Button
+          text="Launch"
+          variant="tertiary"
+          arrow={false}
+          shadow={false}
+          onClick={launch}
+        />
+        <br />
+        <Badge text="HTML" />
+        <Badge text="HTML" />
+        <br />
+        <br />
+        <LabeledIcon label="HTML">
+          <FaHtml5 className="text-[34px] lg:text-[64px]" />
+        </LabeledIcon>
+        <br />
+        <br />
+        <Card
+          img={PlaceholerImg}
+          badges={[
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Java",
+            "C++",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Java",
+            "C++",
+          ]}
+          title="Calculator"
+          text="A calculator app that can perform basic arithmetic operations. "
+        >
+          <Button
+            className="col-span-2"
+            text="Learn More"
+            variant="primary"
+            arrow={true}
+            shadow={true}
+            onClick={learnMore}
+          />
+          <Button
+            text="GitHub"
+            variant="secondary"
+            arrow={false}
+            shadow={false}
+            onClick={github}
+          />
+          <Button
+            text="Launch"
+            variant="tertiary"
+            arrow={false}
+            shadow={false}
+            onClick={launch}
+          />
+        </Card>
+      </main>
     </>
   );
 }
