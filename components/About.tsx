@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function About({ data }: { data: IAboutMe }) {
   const imageSource: string =
-    "https://images.unsplash.com/photo-1618155530308-c37a780555e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80";
+    "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80";
   return (
     <div
       id="about"

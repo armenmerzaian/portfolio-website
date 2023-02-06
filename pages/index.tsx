@@ -9,7 +9,7 @@ import {cardData} from '../util/CardData';
 import {aboutMeData} from '../util/AboutMeData';
 import Technologies from '@/components/Technologies';
 import About from '@/components/About';
-import Contact from '@/components/Contact';
+import ContactForm from '@/components/ContactForm';
 
 export default function Home() {
   
@@ -41,7 +41,7 @@ export default function Home() {
 
         <div className="w-full h-[70px] lg:h-[228px]" />
 
-        <Contact />
+        <ContactForm />
 
         <div className="w-full h-[70px] lg:h-[228px]" />
       </main>
