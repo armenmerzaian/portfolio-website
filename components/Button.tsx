@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 import { FaGithub, FaRocket, FaArrowRight} from "react-icons/fa";
 
@@ -11,7 +12,7 @@ import { FaGithub, FaRocket, FaArrowRight} from "react-icons/fa";
     To use the onClick prop, you must pass a function as the value of the onClick prop.
 */
 
-export default function Button({text, variant, arrow, shadow, onClick, className}: {text: string, variant: 'primary' | 'secondary' | 'tertiary', arrow: boolean, shadow: boolean, onClick: () => void, className?: string}) {
+export default function Button({to, text, variant, arrow, shadow, className}: {to: string, text: string, variant: 'primary' | 'secondary' | 'tertiary', arrow: boolean, shadow: boolean, className?: string}) {
   
   let primaryStyle =
     "font-primary text-[#15181E] font-semibold text-lg px-6 py-2 bg-primary-gradient rounded-md flex items-center justify-center gap-2" +
@@ -24,8 +25,8 @@ export default function Button({text, variant, arrow, shadow, onClick, className
     (className ? " " + className : "");
 
   return (
-    <button
-      onClick={onClick}
+    <Link
+      href={to}
       className={
         variant == "primary"
           ? primaryStyle
@@ -38,7 +39,7 @@ export default function Button({text, variant, arrow, shadow, onClick, className
       <FaRocket className={variant == "tertiary" ? "" : "hidden"} />
       {text}
       <FaArrowRight className={arrow ? "" : "hidden"} />
-    </button>
+    </Link>
   );
 }
 

@@ -1,32 +1,59 @@
-export const cardData = {
-    card1: {
+import {IProject} from '../interface/IProject';
+
+export const cardData: IProject[] = [
+    {
         title: 'Card 1',
         badges: ['badge1', 'badge2'],
-        description: 'This is card 1',
-        image: 'https://picsum.photos/200/300',
+        text: 'This is card 1',
+        img: 'https://picsum.photos/500/',
+        github: '',
+        learnMore: '',
+        launch: '',
+        images: [],
+        description: '',
     },
-    card2: {    
+    {    
         title: 'Card 2',
         badges: ['badge1', 'badge2'],
-        description: 'This is card 2',
-        image: 'https://picsum.photos/200/300',
+        text: 'This is card 2',
+        img: 'https://picsum.photos/500/',
+        github: '',
+        learnMore: '',
+        launch: '',
+        images: [],
+        description: '',
     },
-    card3: {
+    {
         title: 'Card 3',
         badges: ['badge1', 'badge2'],
-        description: 'This is card 3',
-        image: 'https://picsum.photos/200/300',
+        text: 'This is card 3',
+        img: 'https://picsum.photos/500/',
+        github: '',
+        learnMore: '',
+        launch: '',
+        images: [],
+        description: '',
     },
-    card4: {
+    {
         title: 'Card 4',
         badges: ['badge1', 'badge2'],
-        description: 'This is card 4',
-        image: 'https://picsum.photos/200/300',
+        text: 'This is card 4',
+        img: 'https://picsum.photos/500/',
+        github: '',
+        learnMore: '',
+        launch: '',
+        images: [],
+        description: '',
     },
-    card5: {
+    {
         title: 'Card 5',
         badges: ['badge1', 'badge2'],
-        description: 'This is card 5',
-        image: 'https://picsum.photos/200/300',
+        text: 'This is card 5',
+        img: 'https://picsum.photos/500/',
+        github: '',
+        learnMore: '',
+        launch: '',
+        images: [],
+        description: '',
     },
-}
+]
