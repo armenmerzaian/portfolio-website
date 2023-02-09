@@ -12,20 +12,20 @@ export default function Navbar() {
   return (
     <nav className="bg-background sticky top-0 left-0 px-6 lg:px-[193px] pb-2.5 pt-10 z-20 w-full">
       <div className="container flex flex-wrap items-center justify-between mx-auto h-fit lg:h-12">
-        <Link href="#" target="_self">
+        <Link href="/" target="_self">
           <h1 className="text-2xl lg:text-4xl font-[1000] text-primary font-primary lg:text-3">
             AM
           </h1>
         </Link>
         <ul className="hidden lg:flex flex-wrap items-center justify-between lg:flex-row lg:gap-10 text-lg font-primary font-semibold text-primary">
           <li>
-            <Link href="#about">About</Link>
+            <Link href="/#projects">Projects</Link>
           </li>
           <li>
-            <Link href="#projects">Projects</Link>
+            <Link href="/#about">About</Link>
           </li>
           <li>
-            <Link href="#contact">Contact</Link>
+            <Link href="/#contact">Contact</Link>
           </li>
         </ul>
         <FaBars
@@ -48,16 +48,7 @@ export default function Navbar() {
           <ul className="flex flex-col items-center gap-12 font-primary font-semibold text-2xl text-primary">
             <li>
               <Link
-                href="#about"
-                className="hover:font-bold"
-                onClick={toggleMobileNav}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#projects"
+                href="/#projects"
                 className="hover:font-bold"
                 onClick={toggleMobileNav}
               >
@@ -66,7 +57,16 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="#contact"
+                href="/#about"
+                className="hover:font-bold"
+                onClick={toggleMobileNav}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/#contact"
                 className="hover:font-bold"
                 onClick={toggleMobileNav}
               >

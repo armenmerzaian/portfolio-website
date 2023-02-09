@@ -4,7 +4,7 @@ import Projects from '@/components/Projects';
 
 import { FaAngleDoubleDown } from 'react-icons/fa';
 
-import HeroImg from '/public/placeholder-hero.jpg';
+import HeroImg from '/public/memoji.png';
 import {cardData} from '../util/CardData';
 import {aboutMeData} from '../util/AboutMeData';
 import Technologies from '@/components/Technologies';

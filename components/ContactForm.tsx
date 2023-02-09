@@ -1,172 +1,146 @@
+import Link from 'next/link';
 import React, {useState} from 'react'
-import { CgClose } from 'react-icons/cg';
-import { FaExclamation } from 'react-icons/fa';
-import Modal from './Modal';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { BButton } from './Button';
+import FormInput, { FormTextarea } from './FormInput';
+import { SuccessModal, ErrorModal } from "./Modal";
+import Subheading from './Subheading';
 
-export default function ContactForm() {
+export default function ContactForm(): JSX.Element {
   const [modalShow, setModalShow] = useState(true);
   const [errorModalShow, setErrorModalShow] = useState(false);
 
-  function handleClick(e) {
-    let data: FormData  = new FormData(e.target);
-    let action: string = "https://www.formbackend.com/f/08da67ac6f24201c";
+  function handleSubmit(e): void {
+    let data: FormData = new FormData(e.target);
+    let action: string = "https://www.formbackend.com/f/5e1db3df8b119ea4";
     let request: XMLHttpRequest = new XMLHttpRequest();
+    let form: HTMLFormElement = document.getElementById(
+      "contact-form"
+    ) as HTMLFormElement;
     request.open("POST", action, true);
-    request.onerror = function () {
-      //request failed
+
+    /* https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests */
+    request.onload = (e) => {
+      if (request.readyState === 4) {
+        if (request.status === 200) {
+          setModalShow(true);
+          form.reset();
+        } else {
+          setErrorModalShow(true);
+          form.reset();
+        }
+      }
+    };
+    request.onerror = (e) => {
       setErrorModalShow(true);
     };
+
     request.send(data);
-    setModalShow(true);
     e.preventDefault();
-    document.getElementById("contact-form").reset();
   }
 
   return (
-    <div className="p-4 tablet:p-8 rounded-2xl bg-surface-6 shadow-sm laptop:pb-9  h-full">
-      <h1 className="text-primary-55 text-lg laptop:text-2xl font-semibold mb-6 webkit-padding">
-        Send Us A Message
-      </h1>
+    <div
+      id="contact"
+      className="container flex flex-col md:flex-row md:justify-between md:items-center md:gap-12 lg:gap-24 mx-auto md:border-2 md:border-[#2A303C] md:rounded-[32px] md:px-10 md:py-8"
+    >
+      <div className="md:max-w-[50%]">
+        <h2 className="ml-[30px] lg:ml-0 text-primary w-fit font-secondary text-[24px] leading-[35px] lg:text-[32px] lg:leading-[47px] lg:mb-[6px]">
+          Let's get in touch...
+        </h2>
+        <div className="font-primary text-lg leading-[27px] lg:text-[21px] lg:leading-[35px] text-[#C3C9D5] font-medium mx-[30px] lg:mx-0 lg:max-w-[85%]">
+          If you ever want to talk about any potential opportunities, you can
+          find me on social media or send me a message here!
+        </div>
+        <div className="flex gap-6 lg:gap-16 mx-[30px] lg:mx-0 text-[#C3C9D5] my-6 lg:mb-0 lg:mt-[38px]">
+          <Link
+            href="https://www.linkedin.com/in/armen-merzaian"
+            target="_blank"
+          >
+            <FaLinkedin className="w-[28px] h-[32px] lg:w-[42px] lg:h-[48px]" />
+          </Link>
+          <Link href="https://www.github.com/armenmerzaian" target="_blank">
+            <FaGithub className="w-[28px] h-[32px] lg:w-[42px] lg:h-[48px]" />
+          </Link>
+        </div>
+      </div>
       <form
         acceptCharset="UTF-8"
-        className="tablet:grid space-y-[36px] tablet:space-y-0 grid-cols-1 tablet:grid-cols-2 gap-8"
-        onSubmit={handleClick}
+        className="mx-[30px] lg:mx-0 text-[#8793AB] font-primary font-medium text-sm leading-[18px] lg:text-base lg:leading-[20px] flex flex-col gap-5 lg:gap-7 md:flex-grow lg:max-w-[40%]"
+        onSubmit={handleSubmit}
         id="contact-form"
       >
         <div className="flex flex-col">
-          <input
+          <FormInput
             type="text"
-            name="first_name"
-            id="first_name"
-            placeholder="Enter your first name"
-            className="bg-transparent border-x-0 border-t-0 border-b appearance-none w-full pl-0 text-sm text-tertiary-light h-7 order-3 justify-start"
-            required
+            name="name"
+            id="name"
+            placeholder="Name"
+            className="order-3"
             minLength={2}
+            required
           />
           <label
-            htmlFor="first_name"
-            className="text-sm leading-6 text-tertiary-light order-1"
+            htmlFor="name"
+            className="order-1 text-[#C3C9D5] font-primary font-medium text-[14px] leading-[18px] lg:text-[16px] lg:leading-[20px]"
           >
-            First Name
+            Name
           </label>
         </div>
         <div className="flex flex-col">
-          <input
-            type="text"
-            name="last_name"
-            id="last_name"
-            placeholder="Enter your last name"
-            className="bg-transparent border-x-0 border-t-0 border-b appearance-none w-full pl-0 text-sm text-tertiary-light h-7 order-3"
-            required
-            minLength={2}
-          />
-          <label
-            htmlFor="last"
-            className="text-sm leading-6 text-tertiary-light order-1"
-          >
-            Last Name
-          </label>
-        </div>
-        <div className="flex flex-col">
-          <input
+          <FormInput
             type="text"
             name="email"
             id="emailInput"
-            placeholder="Enter your email"
-            className="bg-transparent border-x-0 border-t-0 border-b appearance-none w-full pl-0 text-sm text-tertiary-light h-7 order-3"
+            placeholder="Email"
+            className=" order-2"
             required
             pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
           />
           <label
             htmlFor="emailInput"
-            className="text-sm leading-6 text-tertiary-light order-1"
+            className="order-1 text-[#C3C9D5] font-primary font-medium text-[14px] leading-[18px] lg:text-[16px] lg:leading-[20px]"
           >
             Email
           </label>
         </div>
-        <div className="flex flex-col">
-          <input
-            type="tel"
-            name="tel_number"
-            id="tel_number"
-            placeholder="Enter your phone number"
-            className="bg-transparent border-x-0 border-t-0 border-b appearance-none pl-0 text-sm text-tertiary-light h-7 order-3"
-            required
-            pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
-          />
-          <label
-            htmlFor="tel_number"
-            className="text-sm leading-6 text-tertiary-light order-1"
-          >
-            Phone
-          </label>
-        </div>
         <div className="flex flex-col col-span-2">
-          <textarea
+          <FormTextarea
             name="message"
-            className="w-full bg-transparent rounded-lg mt-1 text-sm resize-none h-[179px] order-2 text-tertiary-light"
-            placeholder="Send us a message..."
+            className=" order-2 "
+            placeholder="Message"
             required
             maxLength={300}
             minLength={20}
           />
-          <label className="laptop:col-span-full text-sm leading-6 text-tertiary-light order-1">
+          <label className="order-1 text-[#C3C9D5] font-primary font-medium text-[14px] leading-[18px] lg:text-[16px] lg:leading-[20px]">
             Message
           </label>
         </div>
-        <button className="w-fit ml-auto font-semibold rounded-[100px] px-4 py-2 bg-primary-55 hover:bg-primary-65 active:bg-primary-75 tablet:col-span-full max-h-12">
-          Send Message
-        </button>
+        <BButton
+          text="Send Message"
+          icon={false}
+          variant="primary"
+          shadow={false}
+          className="mt-[12px] lg:mt-[20px]"
+        />
       </form>
       {modalShow ? (
-        <Modal
+        <SuccessModal
           modalShow={modalShow}
           setModalShow={setModalShow}
           title="Message Sent!"
-          text="Thank you for sending us a message, we will get back to you as soon as possible!"
+          text="Thank you for sending me a message, I will get back to you as soon as possible!"
         />
-      ) : (
-        ""
-      )}
+      ) : null}
       {errorModalShow ? (
         <ErrorModal
           errorModalShow={errorModalShow}
           setErrorModalShow={setErrorModalShow}
         />
-      ) : (
-        ""
-      )}
+      ) : null}
     </div>
   );
 }
 
-function ErrorModal({ errorModalShow, setErrorModalShow }) {
-  function toggleModal() {
-    setErrorModalShow(!errorModalShow);
-  }
-  return (
-    <div className="fixed z-40 inset-0 bg-black/60 backdrop-blur-2xl flex justify-center items-center">
-      <div className="bg-surface-1 rounded-2xl w-[343px] h-[332px] grow-0 shrink-0 flex flex-col justify-start items-center">
-        <button onClick={toggleModal} className="self-end pt-[20px] pr-[20px]">
-          <CgClose />
-        </button>
-        <span className="mx-auto mb-6">
-          <FaExclamation />
-        </span>
-        <h3 className="text-primary-55 text-xl leading-8 font-bold text-center mb-2">
-          Oops!
-        </h3>
-        <p className="text-center text-tertiary-light/87 text-sm laptop:text-base px-[12px] leading-loose mb-5">
-          Your form could not be submitted.{" "}
-          <span className="block">Try again later.</span>
-        </p>
-        <button
-          onClick={toggleModal}
-          className="rounded-[100px] px-4 py-2 bg-primary-55"
-        >
-          Done
-        </button>
-      </div>
-    </div>
-  );
-}
+
