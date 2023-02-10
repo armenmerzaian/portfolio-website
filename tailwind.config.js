@@ -27,8 +27,8 @@ module.exports = {
 
       fontFamily: {
         primary: ["Mulish", "sans-serif"],
-        secondary: ["Indie Flower", "cursive"],
         tertiary: ["Inter", "sans-serif"],
+        other: ["Karma", "serif"],
       },
     },
   },

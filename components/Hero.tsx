@@ -20,7 +20,7 @@ export default function Hero({ img }: { img: any }) {
           <span className="text-primary">mobile development</span>. I bring a
           unique skillset to deliver stunning, functional, and scalable
           products.{" "}
-          <span className="font-secondary block text-primary mt-4 text-2xl">
+          <span className="hidden font-other font-semibold text-primary mt-4 text-2xl">
             {"Let's build something great together!"}
           </span>
           <span className="block mt-4 text-[#C3C9D5]/70 text-base">

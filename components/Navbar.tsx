@@ -12,8 +12,8 @@ export default function Navbar() {
   return (
     <nav className="bg-background sticky top-0 left-0 px-6 lg:px-[193px] pb-2.5 pt-10 z-20 w-full">
       <div className="container flex flex-wrap items-center justify-between mx-auto h-fit lg:h-12">
-        <Link href="/" target="_self">
-          <h1 className="text-2xl lg:text-4xl font-[1000] text-primary font-primary lg:text-3">
+        <Link href="/" target="_self" className="">
+          <h1 className="text-[30px] leading-[32px] lg:text-4xl font-[1000] text-primary font-primary lg:text-3">
             AM
           </h1>
         </Link>

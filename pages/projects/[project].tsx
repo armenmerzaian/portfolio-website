@@ -33,7 +33,7 @@ export default function LearnMore() {
                     />
                   </div>
                   <div className="mt-[22px] lg:mt-[32px]">
-                    <div className="flex gap-3 lg:gap-4 flex-wrap w-[292px] lg:w-full lg:max-w-[1120px]">
+                    <div className="flex gap-3 lg:gap-4 flex-wrap w-full lg:max-w-[1120px]">
                       {project.badges.map((badge, key) => (
                         <Badge key={key} text={badge} />
                       ))}

@@ -45,7 +45,7 @@ export default function ContactForm(): JSX.Element {
       className="container flex flex-col md:flex-row md:justify-between md:items-center md:gap-12 lg:gap-24 mx-auto md:border-2 md:border-[#2A303C] md:rounded-[32px] md:px-10 md:py-8"
     >
       <div className="md:max-w-[50%]">
-        <h2 className="ml-[30px] lg:ml-0 text-primary w-fit font-secondary text-[24px] leading-[35px] lg:text-[32px] lg:leading-[47px] lg:mb-[6px]">
+        <h2 className="ml-[30px] lg:ml-0 text-primary w-fit font-other font-semibold text-[24px] leading-[35px] lg:text-[32px] lg:leading-[47px] lg:mb-[6px]">
           {"Let's get in touch..."}
         </h2>
         <div className="font-primary text-lg leading-[27px] lg:text-[21px] lg:leading-[35px] text-[#C3C9D5] font-medium mx-[30px] lg:mx-0 lg:max-w-[85%]">
