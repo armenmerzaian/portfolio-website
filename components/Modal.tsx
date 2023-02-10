@@ -79,7 +79,7 @@ export function ErrorModal({ errorModalShow, setErrorModalShow }): JSX.Element {
         <BButton
           icon={false}
           shadow={false}
-          variant="tertiary"
+          variant="primary"
           onClick={toggleModal}
           text="Done"
         />

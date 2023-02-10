@@ -7,7 +7,7 @@ import { SuccessModal, ErrorModal } from "./Modal";
 import Subheading from './Subheading';
 
 export default function ContactForm(): JSX.Element {
-  const [modalShow, setModalShow] = useState(true);
+  const [modalShow, setModalShow] = useState(false);
   const [errorModalShow, setErrorModalShow] = useState(false);
 
   function handleSubmit(e): void {
@@ -46,7 +46,7 @@ export default function ContactForm(): JSX.Element {
     >
       <div className="md:max-w-[50%]">
         <h2 className="ml-[30px] lg:ml-0 text-primary w-fit font-secondary text-[24px] leading-[35px] lg:text-[32px] lg:leading-[47px] lg:mb-[6px]">
-          Let's get in touch...
+          {"Let's get in touch..."}
         </h2>
         <div className="font-primary text-lg leading-[27px] lg:text-[21px] lg:leading-[35px] text-[#C3C9D5] font-medium mx-[30px] lg:mx-0 lg:max-w-[85%]">
           If you ever want to talk about any potential opportunities, you can

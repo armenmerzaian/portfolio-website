@@ -7,8 +7,6 @@ import portrait from "/public/armen_portrait.png"
 import {HiDocumentText} from "react-icons/hi"
 
 export default function About({ data }: { data: IAboutMe }) {
-  const imageSource: string =
-    "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80";
   return (
     <div
       id="about"
@@ -21,7 +19,7 @@ export default function About({ data }: { data: IAboutMe }) {
           <p>{data.paragraph2}</p>
           <p>{data.paragraph3}</p>
           <p>{data.paragraph4}</p>
-          <Link href="" className="text-base lg:text-lg font-normal hover:underline flex justify-start gap-2 lg:gap-4 items-center text-white">
+          <Link href={data.resume} target="_blank" className="text-base lg:text-lg font-normal hover:underline flex justify-start gap-2 lg:gap-4 items-center text-white">
             <HiDocumentText />
             Resume
           </Link>

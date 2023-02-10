@@ -10,19 +10,18 @@ export default function Hero({ img }: { img: any }) {
     >
       <div className="mx-[30px] lg:mx-0 sm:mx-auto lg:max-w-[50%]">
         <h1 className="font-primary font-bold text-[32px] lg:text-[48px] leading-[40px] lg:leading-[60px] text-primary">
-          <span className="font-primary">
-            Hi!{" "}
-          </span>{" "}
-          <br className="lg:hidden" /> I'm Armen.
+          <span className="font-primary">{"Hi! "}</span>
+          <br className="lg:hidden" />
+          {" I'm Armen."}
         </h1>
         <h2 className="mt-[18px] mb-[38px] font-primary font-medium text-[18px] lg:text-[21px] leading-[27px] lg:leading-[35px] text-[#C3C9D5]">
-          I'm a software engineer specializing in{" "}
+          {"I'm a software developer specializing in "}
           <span className="text-primary">full stack web</span> and{" "}
           <span className="text-primary">mobile development</span>. I bring a
           unique skillset to deliver stunning, functional, and scalable
           products.{" "}
           <span className="font-secondary block text-primary mt-4 text-2xl">
-            Let's build something great together!
+            {"Let's build something great together!"}
           </span>
           <span className="block mt-4 text-[#C3C9D5]/70 text-base">
             Currently completing a Bachelor of Technology at Seneca College.
