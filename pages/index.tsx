@@ -1,15 +1,19 @@
 import Head from 'next/head';
-import Hero from '@/components/Hero';
-import Projects from '@/components/Projects';
-
+//icons
 import { FaAngleDoubleDown } from 'react-icons/fa';
-
+//images
 import HeroImg from '/public/memoji.png';
+//data
 import {cardData} from '@/util/CardData';
 import {aboutMeData} from '@/util/AboutMeData';
+//components
 import Technologies from '@/components/Technologies';
 import About from '@/components/About';
 import ContactForm from '@/components/ContactForm';
+import Projects from '@/components/Projects';
+import Hero from '@/components/Hero';
+
+
 
 export default function Home() {
   
@@ -28,7 +32,6 @@ export default function Home() {
         <FaAngleDoubleDown className="w-10 h-10 lg:w-12 lg:h-12 text-primary mx-auto mt-36 sm:mt-64 animate-[bounce_2s_infinite]" />
 
         <div className="w-full h-[70px] lg:h-[228px]" />
-
         <Projects data={cardData} />
 
         <div className="w-full h-[70px] lg:h-[228px]" />

@@ -1,6 +1,6 @@
 import BackButton from '@/components/BackButton'
 import React from 'react'
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/router'
 import { cardData } from '@/util/CardData';
 import Badge from '@/components/Badge';
@@ -116,7 +116,7 @@ export default function LearnMore() {
   );
 }
 
-function DescImages({context}: {context: string[]}) {
+function DescImages({context}: {context: string[] | StaticImageData[]}) {
   let images;
   if(context.length > 1){
     images = context.slice(1);
