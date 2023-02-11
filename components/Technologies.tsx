@@ -27,7 +27,7 @@ export default function Technologies() {
   return (
     <div id="technologies" className="container mx-auto">
       <Subheading>Technologies I work with...</Subheading>
-      <div className="flex flex-wrap mx-4 lg:mx-0 justify-center gap-4">
+      <div className="flex flex-wrap mx-4 lg:mx-0 justify-center gap-4 lg:gap-8">
         <LabeledIcon label="TypeScript" className="!gap-0">
           <SiTypescript className="text-[28px] lg:text-[55px] mb-6" />
         </LabeledIcon>
