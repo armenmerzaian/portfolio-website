@@ -2,17 +2,17 @@ import {IProject} from '../interface/IProject';
 
 //image imports
 //placeholder
-import placeholder from '../public/placeholder.png';
+import placeholder from '@/public/placeholder.png';
 //android-calculator
-import project_calculator from '../public/project_calculator.gif';
+import project_calculator from '@/public/project_calculator.gif';
 //first-picture-whse
-import project_fp from '../public/project_fp.gif';
+import project_fp from '@/public/project_fp.gif';
 //weather-app
-import project_weather from '../public/project_weather.gif';
+import project_weather from '@/public/project_weather.gif';
 //seneca-social
-import project_seneca from '../public/project_senecasocial.gif';
+import project_seneca from '@/public/project_senecasocial.gif';
 //carrental
-import project_carrental from '../public/project_carrental.gif';
+import project_carrental from '@/public/project_carrental.gif';
 
 
 export const cardData: IProject[] = [

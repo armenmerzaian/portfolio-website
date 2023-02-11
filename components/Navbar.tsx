@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { CgClose } from "react-icons/cg";
 
@@ -9,6 +9,14 @@ export default function Navbar() {
   const toggleMobileNav = () => {
     setMobileNav(!mobileNav);
   };
+
+  useEffect(() => {
+    if (mobileNav) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [mobileNav]);
 
   return (
     <nav className=".nav bg-background sticky top-0 left-0 px-6 lg:px-[193px] pb-2.5 pt-10 z-20 w-full">
