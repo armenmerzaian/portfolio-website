@@ -51,7 +51,6 @@ export function LinkButton({
           ? secondaryStyle
           : tertiaryStyle
       }
-      scroll={false}
     >
       <FaGithub className={icon && variant == "secondary" ? "" : "hidden"} />
       <FaRocket className={icon && variant == "tertiary" ? "" : "hidden"} />

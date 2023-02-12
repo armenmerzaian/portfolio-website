@@ -5,6 +5,7 @@ import {LinkButton} from "./Button";
 
 export default function Card({
   img,
+  imgPos,
   badges,
   title,
   text,
@@ -13,6 +14,7 @@ export default function Card({
   launch
 }: {
   img: any;
+  imgPos: string;
   badges: string[];
   title: string;
   text: string;
@@ -27,7 +29,7 @@ export default function Card({
           src={img}
           alt="action card"
           fill={true}
-          className="object-cover rounded-t-2xl lg:rounded-t-none lg:rounded-l-3xl"
+          className={`object-cover rounded-t-2xl lg:rounded-t-none lg:rounded-l-3xl ${imgPos}`}
         />
       </div>
       <div className="flex flex-col p-[22px] lg:py-8 lg:px-10 w-full">

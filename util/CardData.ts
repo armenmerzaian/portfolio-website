@@ -2,17 +2,27 @@ import {IProject} from '../interface/IProject';
 
 //image imports
 //placeholder
-import placeholder from '@/public/placeholder.png';
+import placeholder from '@/public/images/placeholder.png';
 //android-calculator
-import project_calculator from '@/public/project_calculator.gif';
+import project_calculator from '@/public/images/project_calculator/project_calculator.gif';
+import project_calculator_code from '@/public/images/project_calculator/project_calculator_code.png';
+import project_calculator_design from '@/public/images/project_calculator/project_calculator_design.png';
 //first-picture-whse
-import project_fp from '@/public/project_fp.gif';
+import project_fp from '@/public/images/project_fp/project_fp.gif';
+import project_fp_code from '@/public/images/project_fp/project_fp_code.png';
+import project_fp_design from '@/public/images/project_fp/project_fp_design.png';
+import project_fp_design2 from '@/public/images/project_fp/project_fp_design2.png';
 //weather-app
-import project_weather from '@/public/project_weather.gif';
+import project_weather from '@/public/images/project_weather/project_weather.gif';
+import project_weather_code from '@/public/images/project_weather/project_weather_code.png';
+import project_weather_design from '@/public/images/project_weather/project_weather_design.png';
 //seneca-social
-import project_seneca from '@/public/project_senecasocial.gif';
+import project_seneca from '@/public/images/project_senecasocial/project_senecasocial.gif';
+import project_seneca_code from '@/public/images/project_senecasocial/project_senecasocial_code.png';
+import project_seneca_design from '@/public/images/project_senecasocial/project_senecasocial_design.png';
 //carrental
-import project_carrental from '@/public/project_carrental.gif';
+import project_carrental from '@/public/images/project_carrental/project_carrental.gif';
+import project_carrental_code from '@/public/images/project_carrental/project_carrental_code.png';
 
 
 export const cardData: IProject[] = [
@@ -22,10 +32,11 @@ export const cardData: IProject[] = [
         badges: ['ANDROID', 'JAVA'],
         text: 'Native Android app programmed in Java and designed in Android Studio. Design inspired by Apple.',
         img: project_calculator,
+        imgPos: 'object-[top_-30px_left_0] lg:object-left-top',
         github: 'https://github.com/armenmerzaian/androidcalculator',
         learnMore: '/projects/android-calculator',
         launch: 'https://github.com/armenmerzaian/androidcalculator/blob/master/SimpleCalculator.apk',
-        images: [placeholder, placeholder],
+        images: [project_calculator_code, project_calculator_design],
         desc_block_1: [
             "I created the Calculator app, a native Android app that streamlines the calculation process. Designed in Android Studio and programmed in Java, I was inspired by Apple's design aesthetics to deliver an interface that is both intuitive and visually appealing.",
             "At the core of my app is the ability to input multiple arithmetic terms as input, which are then parsed and calculated using an advanced algorithm. The algorithm uses a string array for input, dividing it into a 'Numbers' stack and an 'Operations' stack to determine the order of operations. I used doubles during calculation and rounded to two significant digits, ensuring accurate and precise results every time.",
@@ -43,10 +54,11 @@ export const cardData: IProject[] = [
         badges: ['WEB','GATSBY', 'REACT', 'HTML', 'TAILWIND CSS'],
         text: 'Built from the ground-up, a new website for a local business. The website is built with Gatsby, React, HTML, and TailwindCSS.',
         img: project_fp,
+        imgPos: 'object-center',
         github: 'https://github.com/armenmerzaian/firstpictureframewhse.github.io',
         learnMore: '/projects/first-picture-whse',
         launch: 'https://firstpictureframewhse-github-io.vercel.app/',
-        images: [placeholder, placeholder, placeholder],
+        images: [project_fp_code, project_fp_design, project_fp_design2],
         desc_block_1: [
             "As a web developer, I recently had the pleasure of building a new website for a local business in Toronto, named The First Picture Frame Warehouse. This small family-run business has been operating since 1984 and specializes in custom picture and object framing. With the recent pandemic, the business saw a decline in revenue, which is why they approached me to build a modern and attractive website to help attract a younger audience and improve their online presence.",
             "In collaboration with local designer Derick Aghamalian, we conducted user research and aimed to create a website that was not only modern and attractive, but also mobile responsive, to provide an excellent user experience to anyone on-the-go. The website is built with React, Gatsby, HTML, and TailwindCSS. I chose Gatsby for its well-known performance, excellent ecosystem of plugins, and great developer experience, and TailwindCSS for its high level of customizability, efficiency, and ability to allow me to use vanilla CSS when needed.",
@@ -63,10 +75,11 @@ export const cardData: IProject[] = [
         badges: ['ANDROID','FLUTTER', 'DART', 'FIREBASE', 'FIRESTORE','REST API'],
         text: 'A full stack social media app built with Flutter and Firebase. Supports user authentication, posting, commenting, and more!',
         img: project_seneca,
+        imgPos: 'object-[top_-30px_left_0] lg:object-left-top',
         github: 'https://github.com/armenmerzaian/seneca-social',
         learnMore: '/projects/seneca-social',
         launch: '',
-        images: [placeholder, placeholder],
+        images: [project_seneca_code, project_seneca_design],
         desc_block_1: [
             "I recently began developing Seneca Social, a full-stack social media app that connects students from across different campuses with similar academic paths and career goals. The front-end of the app was built using Flutter, a UI toolkit that provides a modern and reactive framework for building beautiful and responsive apps. I utilized the Dart programming language, along with Material Component Widgets, to create a seamless user experience.",
             "For the back-end, I chose Firebase and its NoSQL database called Cloud Firestore. I utilized Firebase Auth, a backend service that uses OAuth 2.0 and OpenID, for user authentication. This service made the authentication process quick and easy, and it also verified emails for a consistent and industry-standard user experience. It provided real-time data syncing and offline support for mobile and web, so I was able to build responsive apps that work regardless of network latency or internet connectivity. Firebase Security Rules also allowed me to control access to the data and validate it, ensuring that the user data was kept safe.",
@@ -80,12 +93,13 @@ export const cardData: IProject[] = [
         query: 'weather-app',
         title: 'Weather App',
         badges: ['WEB', 'REACT', 'HTML', 'BOOTSTRAP CSS', 'REST API'],
-        text: 'Created a weather app using React, Bootstrap, and a REST API. Supports search and geolocation.',
+        text: 'Created a weather app using React, Bootstrap, and REST APIs. Features search and geolocation.',
         img: project_weather,
+        imgPos: 'object-center',
         github: 'https://github.com/armenmerzaian/weather-app',
         learnMore: '/projects/weather-app',
         launch: 'https://taupe-llama-46f0dd.netlify.app',
-        images: [placeholder, placeholder],
+        images: [project_weather_design, project_weather_code],
         desc_block_1: [
             "The weather application was created using React, Bootstrap, and a REST API. The purpose of the project was to learn how to handle RESTful API calls and implement dynamic components in React. To do this, I utilized the OpenWeatherMap API, which delivers weather data in JSON format, allowing me to practice skills in parsing JSON objects and working with promised-based data querying.",
             "The user interface of the weather app was built with Bootstrap CSS, which is an excellent all-in-one UI-kit that offers beautiful and modern styling options, is highly responsive, and includes ready-to-use themes and large block components such as navigation bars, hero sections, and footers. The use of Bootstrap allowed me to focus on the logic for fetching and processing data, as it offered a seamless developer experience.",
@@ -98,13 +112,14 @@ export const cardData: IProject[] = [
     {
         query: 'car-rental',
         title: 'Car Rental',
-        badges: ['IOS','ANGULAR', 'TYPESCRIPT', 'IONIC', 'OTHER', 'OTHER', 'OTHER', 'OTHER'],
+        badges: ['IOS','ANGULAR', 'TYPESCRIPT', 'IONIC', 'HTML', 'CSS'],
         text: 'An Angular front-end for a car rental app. Demonstrates the power of Ionic as a mobile app framework.',
         img: project_carrental,
+        imgPos: 'object-[top_-30px_left_0] lg:object-left-top',
         github: 'https://github.com/armenmerzaian/car-rental',
         learnMore: '/projects/car-rental',
         launch: '',
-        images: [placeholder, placeholder],
+        images: [project_carrental_code],
         desc_block_1: [
             "I built this simple car rental cross-platform application using Angular, TypeScript, and Ionic. This project was a great opportunity to delve into Angular's capabilities in mobile development. It's main function is to provide a simple form for the user to fill out, asking for their preferred car type (SUV or Sedan), the rental duration, and whether or not they require a baby booster seat."
         ],

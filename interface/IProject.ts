@@ -6,6 +6,7 @@ export interface IProject {
     badges: string[];
     text: string;
     img: string | StaticImageData;
+    imgPos: string;
     github: string;
     learnMore: string;
     launch?: string;
