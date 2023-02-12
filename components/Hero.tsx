@@ -16,7 +16,7 @@ export default function Hero({ img }: { img: any }) {
         </h1>
         <h2 className="mt-[18px] mb-[38px] font-primary font-medium text-[18px] lg:text-[21px] leading-[27px] lg:leading-[35px] text-[#C3C9D5]">
           {"I'm a software developer specializing in "}
-          <span className="text-primary">full stack web</span> and{" "}
+          <span className="text-primary">web</span> and{" "}
           <span className="text-primary">mobile development</span>. I bring a
           unique skillset to deliver stunning, functional, and scalable
           products.{" "}
