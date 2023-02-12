@@ -13,12 +13,12 @@ export default function LearnMore() {
   
   return (
     <>
-      <div className="fixed w-full z-10 bg-background pb-2 sm:px-6 lg:px-[193px]">
+      <div className="w-full z-10 bg-background pb-2 sm:px-6 lg:px-[193px]">
         <div className="container mx-auto mt-6 flex">
           <BackButton />
         </div>
       </div>
-      <div className="container mx-auto pt-[64px] lg:pt-[75px] mb-8 lg:mb-10">
+      <div className="container mx-auto pt-[36px] mb-8 lg:mb-10">
         <section className="px-8 lg:px-0 lg:max-w-[544px] mx-auto flex flex-col items-center mt-[36px] lg:mt-[54px]">
           {cardData.map((project) => {
             if (project.query === router.query.project) {
@@ -29,7 +29,7 @@ export default function LearnMore() {
                       src={project.img}
                       alt={project.title}
                       fill
-                      className="object-cover rounded-2xl lg:rounded-3xl object-[top_-30px_left_0] lg:object-left-top"
+                      className={`object-cover rounded-2xl lg:rounded-3xl ${project.imgPos}`}
                     />
                   </div>
                   <div className="mt-[22px] lg:mt-[32px]">

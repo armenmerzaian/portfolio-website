@@ -23,7 +23,8 @@ export default function Navbar() {
       <div className="container flex flex-wrap items-center justify-between mx-auto h-fit lg:h-12">
         <Link href="/" target="_self" className="" scroll={false}>
           <h1 className="text-[30px] leading-[32px] lg:text-4xl font-[1000] text-primary font-primary lg:text-3">
-            AM
+            <div className="hidden"><span className="font-other">{"< "}</span>AM<span className="font-other">{" />"}</span></div>
+            <span>AM</span>
           </h1>
         </Link>
         <ul className="hidden lg:flex flex-wrap items-center justify-between lg:flex-row lg:gap-10 text-lg font-primary font-semibold text-primary">

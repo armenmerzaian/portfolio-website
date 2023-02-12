@@ -3,7 +3,7 @@ import React from "react";
 import Subheading from "./Subheading";
 import Image from "next/image";
 import Link from "next/link";
-import portrait from "/public/armen_portrait.png"
+import portrait from "@/public/images/armen_portrait.png"
 import {HiDocumentText} from "react-icons/hi"
 
 export default function About({ data }: { data: IAboutMe }) {
