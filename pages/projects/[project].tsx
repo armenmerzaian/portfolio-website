@@ -13,11 +13,6 @@ export default function LearnMore() {
   
   return (
     <>
-      <div className="w-full z-10 bg-background pb-2 sm:px-6 lg:px-[193px]">
-        <div className="container mx-auto mt-6 flex">
-          <BackButton />
-        </div>
-      </div>
       <div className="container mx-auto pt-[36px] mb-8 lg:mb-10">
         <section className="px-8 lg:px-0 lg:max-w-[544px] mx-auto flex flex-col items-center mt-[36px] lg:mt-[54px]">
           {cardData.map((project) => {
@@ -57,7 +52,7 @@ export default function LearnMore() {
                         src={project.images[0]}
                         alt=""
                         fill
-                        className="object-cover rounded-2xl lg:rounded-3xl object-[top_-30px_left_0] lg:object-left-top"
+                        className="object-cover rounded-2xl lg:rounded-3xl object-center lg:object-left-top"
                       />
                     </div>
                     <div className="mt-[25px] lg:mt-[38px]">
@@ -132,9 +127,17 @@ function DescImages({context}: {context: string[] | StaticImageData[]}) {
         src={image}
         alt=""
         fill
-        className="object-cover rounded-2xl lg:rounded-3xl object-[top_-30px_left_0] lg:object-left-top"
+        className="object-cover rounded-2xl lg:rounded-3xl object-center lg:object-left-top"
       />
     </div>
   ));
 }
 
+/*
+* Back Button Component
+<div className="w-full z-10 bg-background pb-2 sm:px-6 lg:px-[193px]">
+        <div className="container mx-auto mt-6 flex">
+          <BackButton />
+        </div>
+/div>
+*/

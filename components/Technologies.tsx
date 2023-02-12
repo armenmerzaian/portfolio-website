@@ -46,17 +46,8 @@ export default function Technologies() {
         <LabeledIcon label="React">
           <FaReact className="text-[34px] lg:text-[64px]" />
         </LabeledIcon>
-        <LabeledIcon label="Angular">
-          <FaAngular className="text-[34px] lg:text-[64px]" />
-        </LabeledIcon>
         <LabeledIcon label="NodeJS">
           <FaNodeJs className="text-[34px] lg:text-[64px]" />
-        </LabeledIcon>
-        <LabeledIcon label="Flutter">
-          <SiFlutter className="text-[34px] lg:text-[64px]" />
-        </LabeledIcon>
-        <LabeledIcon label="Dart">
-          <SiDart className="text-[34px] lg:text-[64px]" />
         </LabeledIcon>
         <LabeledIcon label="Java">
           <FaJava className="text-[34px] lg:text-[64px]" />
@@ -64,17 +55,11 @@ export default function Technologies() {
         <LabeledIcon label="C++">
           <SiCplusplus className="text-[34px] lg:text-[64px]" />
         </LabeledIcon>
-        <LabeledIcon label="SQLite">
-          <SiSqlite className="text-[34px] lg:text-[64px]" />
-        </LabeledIcon>
         <LabeledIcon label="Firebase">
           <SiFirebase className="text-[34px] lg:text-[64px]" />
         </LabeledIcon>
         <LabeledIcon label="Vercel">
           <SiVercel className="text-[34px] lg:text-[64px]" />
-        </LabeledIcon>
-        <LabeledIcon label="Heroku">
-          <SiHeroku className="text-[34px] lg:text-[64px]" />
         </LabeledIcon>
         <LabeledIcon label="GitHub">
           <FaGithub className="text-[34px] lg:text-[64px]" />
