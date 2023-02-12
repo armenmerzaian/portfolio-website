@@ -29,7 +29,7 @@ export const cardData: IProject[] = [
     {
         query: 'android-calculator',
         title: 'Calculator',
-        badges: ['ANDROID', 'JAVA'],
+        badges: ['ANDROID', 'JAVA', 'MATERIAL DESIGN'],
         text: 'Native Android app programmed in Java and designed in Android Studio. Design inspired by Apple.',
         img: project_calculator,
         imgPos: 'object-[top_-30px_left_0] lg:object-left-top',
@@ -51,7 +51,7 @@ export const cardData: IProject[] = [
     {   
         query: 'first-picture-whse', 
         title: 'First Picture Frame Warehouse',
-        badges: ['WEB','GATSBY', 'REACT', 'HTML', 'TAILWIND CSS'],
+        badges: ['WEB','GATSBY', 'JAVASCRIPT','REACT', 'HTML', 'TAILWIND CSS'],
         text: 'Built from the ground-up, a new website for a local business. The website is built with Gatsby, React, HTML, and TailwindCSS.',
         img: project_fp,
         imgPos: 'object-center',
@@ -92,7 +92,7 @@ export const cardData: IProject[] = [
     {
         query: 'weather-app',
         title: 'Weather App',
-        badges: ['WEB', 'REACT', 'HTML', 'BOOTSTRAP CSS', 'REST API'],
+        badges: ['WEB', 'REACT', 'JAVASCRIPT','HTML', 'BOOTSTRAP CSS', 'REST API'],
         text: 'Created a weather app using React, Bootstrap, and REST APIs. Features search and geolocation.',
         img: project_weather,
         imgPos: 'object-center',
